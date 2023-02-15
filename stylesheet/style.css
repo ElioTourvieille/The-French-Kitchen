@@ -1,0 +1,980 @@
+@font-face {
+    font-family: 'Edwardian';
+    src: url('../font/edwardian.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'Myanmar-Text';
+    src: url('../font/mmrtext.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Myanmar-Text Bold';
+    src: url('../font/mmrtextb.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family:'Myanmar-Text';
+    background-color: #3f3d3d;
+}
+
+bold, h3{
+    font-family: 'Myanmar-Text Bold';
+}
+
+h1,h2{
+    font-family: 'Edwardian';
+    color: #FFBD59;
+    letter-spacing: 3px;
+    font-size: 2.2rem;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    text-align: center;
+    white-space: none;
+}
+
+p, bold{
+    color:rgb(247, 245, 245);
+}
+
+.menu-wrap-items, .media{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   MOBILE                                   */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                PAGE ACCUEIL                                */
+/* -------------------------------------------------------------------------- */
+
+/* --------------------------------- Header --------------------------------- */
+
+header{
+    height:230px;
+    padding: 10px;
+    background-image: url(../img/wallpaper-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-header{
+    height:41%;
+}
+
+.logo-wrap img{
+    margin-left: 10px;
+    width: 60%;
+}
+
+.menu-header,.title{
+    display:flex;
+    align-items: flex-start;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.title{
+    width: 100%;
+    height:90px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.menu-wrap{
+    overflow: hidden;
+    width:0vh;
+}
+
+/* Sidenav menu */
+.sidenav {
+    height: 60%;
+    width: 200px;
+    position: fixed;
+    border-radius: 5px;
+    z-index: 2;
+    top: 0;
+    right: -250px;
+    background-color: #5a5a5a;
+    padding-top: 60px;
+    transition: right 0.5s ease;
+    display: flex;
+    align-items: center;
+}
+  
+/* Sidenav menu lien */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: #111;
+}
+  
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.sidenav.active {
+    right: 0;
+}
+  
+/* Close btn */
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 35px;
+}
+  
+/* Icône burger */
+  .burger-icon span {
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 5px;
+    right:-100px;
+    background-color: #FFBD59;
+    margin: 6px 0;
+}
+
+/* Bouton "Réserver une table" */
+.book-button {
+    width:260px;
+    height:35px;
+    background: #FFBD59;
+    color: black;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    position: relative;
+    line-height: 24px;
+    cursor: pointer;
+    padding: 9px 0 10px 0;
+    margin: 0;
+    z-index: 1;
+    top: -20px;
+    box-shadow: 0 8px 20px;
+}
+
+.book-button span {
+    z-index: 1;
+    position: relative;
+    width: 132px;
+    font-weight: bolder;
+    border-radius: inherit;
+    color: black;
+}
+
+/* --------------------------------- Section -------------------------------- */
+
+.button, .illustration, .img-small, .img-big{
+    display:flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 0%;
+}
+
+.illustration img{
+    width: 90%;
+    margin-bottom: 15px;
+}
+
+p{
+    margin:25px;
+}
+
+/* --------------------------------- Footer --------------------------------- */
+
+footer{
+    color: white;
+    height: 11rem;
+    background-color: black;
+    padding-top: 4px;
+}
+
+.social-media,.copyright{
+    padding: 1;
+    white-space: nowrap;
+}
+
+.social-media{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.media img{
+    margin: 0 40px;
+    width: 30%;
+}
+
+footer p{
+    margin: 15px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               CARTE & MENU                                 */
+/* -------------------------------------------------------------------------- */
+
+#menu-category, #wine-category, .dishes-wrap{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu-nav{
+    width:100%;
+    height:70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 25px;
+    border-bottom: 2px inset #3f3d3d ;
+}
+
+.menu-nav a{
+    text-decoration: none;
+    color:#ffffff;
+    font-weight: bold;
+    font-size: large;
+    margin:10px 20px;
+    white-space: nowrap;
+}
+
+#menu-category, #wine-category{
+    margin:20px;
+}
+
+#menu-category, #wine-category, .menu-nav{
+    background-color: #5a5a5a;
+    border-radius: 10px;
+}
+
+.starters, .main-dish, .desserts, .wine-nav{
+    padding:0px 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    margin: 25px 0;
+    color: #FFBD59;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.dish_title{
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.dish_descr{
+    color: #e8e8e8;
+    font-style: italic;
+    font-size: bold;
+    text-align: center;
+    
+}
+
+.dish_price{
+    color: #e8e8e8;
+    font-size: 15px;
+}
+
+.dish-price{
+    width: 90%;
+    border-bottom: #3f3d3d inset 2px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   CONTACT                                  */
+/* -------------------------------------------------------------------------- */
+
+.heading-white{
+    text-align: center;
+}
+
+.input--small {
+    position: relative;
+    padding: 20px 0 0;
+    margin-top: 10px;
+    width: 100%;
+}
+ 
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+  
+.form__field::placeholder {
+    color: transparent;
+}
+  
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+}
+  
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #9b9b9b;
+    pointer-events: none;
+}
+  
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #8d6221, #FFBD59);
+    border-image-slice: 1;
+}
+  
+.form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #FFBD59;
+    font-weight: 700;
+}
+
+/* Bouton "Envoyer" */
+
+.button--submit a{
+    text-shadow: 1px 1px 1px #5a5a5a ;
+    font-weight: bold;
+}
+
+.button--submit {
+    position: relative;
+    display: inline-block;
+    margin: 30px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #FFBD59;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 4px solid #FFBD59;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #FFBD59;
+}
+  
+.button--submit:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #FFBD59;
+}
+  
+.button--submit:active {
+    transform: scale(0.9);
+}
+
+.contact{
+    border: 4px solid #5a5a5a;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.restaurant-phone{
+    text-align: center;
+}
+
+iframe{
+    margin:25px 0;
+}
+
+.divider{
+    margin-bottom: 20px;
+}
+
+h4, .hours{
+    color: #ffffff;
+    text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                BONS CADEAUX                                */
+/* -------------------------------------------------------------------------- */
+
+.introduction{
+    width:95%;
+    text-align: center;
+}
+
+.product-container{
+    border: 4px solid #5a5a5a;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.product-container, .product-gallery, .product-gallery a{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-gallery1{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-submit{
+    display: flex;
+    justify-content: center;
+}
+
+.product-gallery, .product-gallery1{
+    width: 65%;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
+    margin:15px 0px;
+}
+
+.product-gallery{
+    background-image: url(../img/Photos-menu2.png);
+}
+
+.product-gallery1{
+    background-image: url(../img/Photos-menu.png);
+}
+
+.gift-price{
+    background-color: #FFBD59;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
+
+h4 strong{
+    color: rgb(249, 248, 248);
+    text-align: center;
+    text-decoration: underline;
+}
+
+.product-people{
+    font-style: italic;
+}
+
+.button--submit a{
+    color: #ffffff;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 RESERVATION                                */
+/* -------------------------------------------------------------------------- */
+
+.introduction{
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    width: 120px;
+    display: inline-block;
+    text-align: left;
+    padding-right: 10px;
+}
+
+input[type="date"],input[type="text"],input[type="time"],input[type="number"] {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    text-align: left;
+}
+
+.input-small{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:30px 0;
+    border-bottom: 2px solid #5a5a5a;
+}
+
+.input-small label{
+    text-align: left;
+    font-size: bold;
+    color: #f6f6f6;
+}
+
+.button--submit a{
+    color:#FFBD59;
+}
+
+.button--submit a:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #FFBD59;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   TABLET                                   */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 768px){
+    /* --------------------------------- Accueil -------------------------------- */
+p{
+    font-size: 16px;
+    max-width: 650px;
+}
+
+.logo-wrap img{
+    margin-left: 20px;
+    width: 75%;
+}
+
+header{
+    height: 220px;
+    padding: 10px;
+    background-image: url(../img/wallpaper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.burger-icon{
+    display:none;
+}
+
+.scrollTo{
+    margin:0 5px;
+}
+
+.menu-wrap{
+    width:75%;
+    margin:15px;
+}
+
+.menu-wrap a{
+    color:white;
+    font-weight: bold;
+    white-space: pre-wrap;
+}
+
+.menu-wrap a:hover{
+    text-decoration: underline;
+}
+
+h1{
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+}
+
+/* Effet sur le titre */
+.tracking-in-contract-bck {
+	-webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
+	        animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
+}
+
+ @-webkit-keyframes tracking-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px);
+              transform: translateZ(400px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px);
+              transform: translateZ(400px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  
+h2{
+    font-size: 2rem;
+}
+
+.description, .illustration {
+    width:50%;
+    padding:15px;
+}
+
+.illustration{
+    display:flex;
+    align-items: center;
+}
+
+.about-us img{
+    width:70%;
+}
+
+.masterchef img{
+    width:100%;
+    height: auto;
+    margin-left: 10px;
+}
+
+.masterchef{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+footer{
+    height: 7.3rem;
+    display: flex;
+    flex-direction: row;
+    padding-top: 0;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+}
+
+/* ---------------------------------- Menus --------------------------------- */
+
+.menu-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.starters, .main-dish,.desserts{
+    width: 70%;
+}
+
+#menu-category, #wine-category{
+    margin: 50px;
+    padding: 50px;
+}
+
+.wine-nav{
+    width: 60%;
+}
+
+/* ------------------------------ Bons cadeaux ------------------------------ */
+
+.gift-price{
+    width:57%;
+}
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   DESKTOP                                  */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 1024px){
+    /* --------------------------------- Accueil -------------------------------- */
+p{
+    font-size: 17px;
+    max-width: 800px;
+}
+
+.social-media{
+    padding: 20px;
+}
+
+header{
+    height: 300px;
+    padding: 10px;
+    background-image: url(../img/wallpaper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo-wrap img{
+    margin-left: 20px;
+    width: 100%;
+}
+
+.burger-icon{
+    display:none;
+}
+
+.menu-wrap{
+    width:60%;
+    margin:20px;
+}
+
+.menu-wrap a{
+    color:white;
+    font-weight: bold;
+}
+
+.menu-wrap a:hover{
+    text-decoration: underline;
+}
+
+.about-us{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.description, .illustration {
+    width:50%;
+    padding:30px;
+}
+
+h1{
+    font-size: 3.3rem;
+    letter-spacing: 5px;
+}
+  
+h2{
+    font-size: 2rem;
+}
+
+.description p{
+    margin-bottom: 1.5em;
+}
+    
+.img-small, .img-big{
+    display: flex;
+    flex-direction: row;
+}
+
+.img-small img{
+    width: 45%;
+    margin: 8px 8px;
+}
+
+.img-big img{
+    width: 94%;
+    height: auto;
+}
+
+footer{
+    height: 9rem;
+    display: flex;
+    flex-direction: row;
+    padding-top: 0;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+}
+
+/* ------------------------------- Réservation ------------------------------ */
+
+.form-toBook{
+    width: 60%;
+}
+
+/* ------------------------------ Bons cadeaux ------------------------------ */
+
+.gift-price{
+    width:55%;
+}
+
+/* --------------------------------- Contact -------------------------------- */
+
+.contact{
+    margin:50px;
+}
+
+form{
+    width:100%;
+}
+
+.opening-hours-wrap{
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h3{
+    font-size:1.5rem;
+}
+
+.day-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+}
+/* -------------------------------------------------------------------------- */
+/*                                LARGE DESKTOP                               */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 1440px){
+    /* --------------------------------- Accueil -------------------------------- */
+
+p, a, h4,label {
+    font-size: 18px;
+    line-height: 2.3em;
+}
+
+h1{
+    font-size: 3.5rem;
+    letter-spacing: 6px;
+}
+  
+h2{
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+section{
+    padding:60px;
+}
+
+/* Bouton "Réserver une table" */
+.book-button {
+    width:350px;
+    height:50px;
+    background: #FFBD59;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    line-height: 30px;
+    cursor: pointer;
+    padding: 10px 10px 6px 10px;
+    margin: 0;
+    z-index: 1;
+    top: -20px;
+    box-shadow: 0 8px 20px;
+}
+
+.book-button span {
+    z-index: 1;
+    position: relative;
+    font-family: "Myanmar-Text";
+    font-size: 22px;
+    font-weight: 800;
+    font-weight: bolder;
+    border-radius: inherit;
+    color: black;
+}
+
+.img-small img{
+    width: 40%;
+    margin: 10px 10px;
+}
+
+.img-big img{
+    width: 84%;
+    height: auto;
+}
+
+.masterchef img{
+    width:80%;
+    height: auto;
+}
+
+footer{
+    height: 5.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0;
+}
+
+.social-media{
+    padding-top: 15px;
+}
+
+.media, .social-media{
+    display: flex;
+    align-items: center;
+}
+
+/* ----------------------------- Cartes et Menu ----------------------------- */
+
+.dish_price{
+    font-size: 17px;
+}
+
+/* ------------------------------- Bon Cadeau ------------------------------- */
+
+.gift-price{
+    width:52%;
+}
+
+/* ----------------------------- Accès / Contact ---------------------------- */
+
+iframe{
+    margin-left: 200px;
+}
+
+.media img{
+    width: 45%;
+}
+
+}

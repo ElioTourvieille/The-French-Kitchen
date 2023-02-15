@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Réserver une table chez French Elite Kitchen à Genève">
+    <title>Réserver une table - French Elite Kitchen | Genève</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <!-- Ajout de la bibliothèque flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="menu-header">
+            <div class="logo-wrap">                   
+                <a href="accueil.html" class="logo">
+                    <img src="img/logo_FEK.png" class="logo" alt="Logo de la FRENCH ELITE KITCHEN/ Retour Accueil"/>                      
+                </a>
+            </div>
+
+        <!-- ----------------- Menu burger pour la version mobile ------------------ -->
+
+        <div id="mySidenav" class="sidenav">
+            <a id="closeBtn" href="#" class="close">×</a>
+            <ul class="nav-menu">
+                <li id="menu-item"><a  href="accueil.html" class="scrollTo">Accueil</a></li>
+                <li id="menu-item"><a  href="menus.html" class="scrollTo">Cartes et Menus</a></li>
+                <li id="menu-item"><a  href="reservation.html" class="scrollTo">Réservation</a></li>
+                <li id="menu-item"><a  href="gift.html" class="scrollTo">Bons Cadeaux</a></li>
+                <li id="menu-item"><a  href="contact.html" class="scrollTo">Accès / Contact</a></li>
+            </ul>
+        </div>
+            
+            <a href="#" id="openBtn" class="open">
+                <span class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                </span>
+            </a>
+
+    <!-- --------------------- Menu classique pour desktop --------------------- -->
+
+        <div class="menu-wrap">			
+            <ul class="menu-wrap-items"></li>
+                <li id="menu-item"><a  href="accueil.html" class="scrollTo">Accueil</a></li>
+                <li id="menu-item"><a  href="menus.html" class="scrollTo">Cartes et Menus</a></li>
+                <li id="menu-item"><a  href="reservation.html" class="scrollTo">Réservation</a></li>
+                <li id="menu-item"><a  href="gift.html" class="scrollTo">Bons Cadeaux</a></li>
+                <li id="menu-item"><a  href="contact.html" class="scrollTo">Accès / Contact</a></li>
+            </ul> 
+        </div>
+        </nav>
+        <div class="title">
+            <h1 class="tracking-in-contract-bck"><bold>RESERVATION</bold></h1>   
+        </div>
+    </header>
+
+    <section class="submit_reserv.">
+        <div class="introduction">
+            <p>Pour toute réservation supérieure à 8 personnes, merci de nous contacter par téléphone au 022 495 36 45 ou par mail à info@fek.ch</p>
+        </div>
+
+        <form class="form-toBook" action="submit_reservation" method="post">
+            <div class="input-small">
+                <label for="date">Date de réservation :</label>
+                <input type="text" id="date" name="date">
+            </div>
+
+            <div class="input-small">
+                <label for="time">Heure de réservation :</label>
+                <input type="time" id="time" name="time">
+            </div>
+
+            <div class="input-small">
+                <label for="persons">Nombre de personnes :</label>
+                <input type="number" id="persons" name="persons">
+            </div>
+            
+            <div class="button">
+                <button class="button--submit"><a href="reservation.html">Soumettre la réservation</a></button>
+            </div>
+        </form>
+    </section>
+    <footer>
+
+        <div class="copyright">
+            <p>© French Elite Kitchen 2023 | Tous droits réservés.</p>
+        </div>
+        <div class="social-media">
+            <p>RETROUVEZ-NOUS SUR FACEBOOK ET INSTAGRAM</p>
+           <ul class="media">
+                <li id="facebook"><a href="https://fr-fr.facebook.com/"><img src="img/logoFB.webp" alt="Logo de Facebook"></a></li>
+                <li id="insta"><a href="https://www.instagram.com/?hl=fr"><img src="img/logoIG.webp" alt="Logo de Instagram"></a></li>
+           </ul> 
+        </div>
+
+    </footer>
+    
+<!-- Initialisation de flatpickr pour le champ de date -->
+<script>
+    flatpickr("#date", {
+      dateFormat: "d-m-Y",
+    });
+  </script>
+  
+<script src="scripts/main.js"></script>
+
+</body>
+</html>
